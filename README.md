@@ -33,16 +33,19 @@ In essence, the JWKS URL acts as a public repository where authorization servers
 ## Functionality
 The script `jwks-create-deploy.sh` does the following
 
-1. Create an RSA key pair
-2. Create a JWKS key out of the key pair created
-3. Save the public and the private key along with JWKS kid in the secret manager for later referene and backup.
+1. Creates an RSA key pair
+2. Creates a JWKS key out of the key pair created
+3. Saves the public and the private key along with JWKS kid in the secret manager for later referene and backup.
 4. If parameter `deploy=true` then it deployes the `jwks.json` as a Cloud Run service (make sure you provide `region` and `project-id` as explained [below](#2-create-and-deploy-jwksjson-as-an-endpoint-cloud-run-service))
 
 ## Usage Instructions
 
-It is recommended that you use the Google Cloud shell to carry out one of the following sets of instructions. You can also use your local (Linux / Mac) machine.
+Running this script in Google Cloud shell is highly recommended, however you can also use your local (Linux / Mac) machine.
 Make sure that [Secret Manager](https://cloud.google.com/security/products/secret-manager) and [Cloud Run](https://cloud.google.com/run) APIs are enabled in the project.
-Also, the user executing the script should have permissions to create the secret and to deploy the Cloud Run service.
+Also, the user executing the script must have permissions to create secrets in Secret Manager and to deploy the Cloud Run service.
+
+> 🪧 **NOTE:**  
+> Depending on your use case (only create / create and deploy) - carry out either 1 or 2 from below.
 
 ### 1. Only create the jwks.json
 
