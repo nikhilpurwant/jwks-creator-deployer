@@ -1,8 +1,11 @@
 # jwks-creator-deployer
 Creates a jwks.json with a keyset. Optionally allows deploying it as a [Cloud Run](https://cloud.google.com/run) service.
 
+<details>
 
-## Background
+<summary>Read More about JWKS URLs Here</summary>
+
+### JWKS URLs
 
 A **JWKS URL** (JSON Web Key Set URL) is a publicly accessible HTTPS endpoint that provides a list of cryptographic public keys used by an authorization server or identity provider to sign JSON Web Tokens (JWTs).
 
@@ -24,6 +27,8 @@ Here's a breakdown of what that means and why it's important:
     6.  Finally, the application uses that public key to verify the JWT's signature.
 
 In essence, the JWKS URL acts as a public repository where authorization servers publish their public keys, allowing other applications to securely verify the digital signatures of the JWTs they issue.
+
+</details>
 
 ## Functionality
 The script `jwks-create-deploy.sh` does the following
