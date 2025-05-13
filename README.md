@@ -3,7 +3,7 @@ Creates a jwks.json with a keyset. Optionally allows deploying it as a [Cloud Ru
 
 <details>
 
-<summary>Read More about JWKS URLs Here</summary>
+<summary>Click to read more about JWKS URLs</summary>
 
 ### JWKS URLs
 
